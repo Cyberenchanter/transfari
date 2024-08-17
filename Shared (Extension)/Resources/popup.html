@@ -1,11 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="popup.css">
-    <script type="module" src="popup.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safari Translator</title>
+    <style>
+        body {
+            width: 300px;
+            padding: 10px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        input, button {
+            width: 100%;
+            padding: 5px;
+        }
+        button {
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <strong>Hello World!</strong>
+    <div class="container">
+        <h2>Safari Translator</h2>
+        <input type="text" id="apiKey" placeholder="Enter DeepL API Key">
+        <button id="saveApiKey">Save API Key</button>
+        <button id="translatePage">Translate Page</button>
+        <button id="cancelTranslation">Cancel Translation</button>
+    </div>
+    <script src="popup.js"></script>
 </body>
 </html>
