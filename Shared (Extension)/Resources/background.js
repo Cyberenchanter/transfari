@@ -1,21 +1,22 @@
 browser.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (request.action === 'translateText') {
-        browser.storage.local.get('deeplApiKey').then(result => {
+        // Fetch the DeepL API key and target language
+        browser.storage.local.get(['deeplApiKey', 'targetLang']).then(result => {
             if (result.deeplApiKey) {
-                translateWithDeepL(request.text, result.deeplApiKey)
+                const targetLang = result.targetLang || 'EN'; // Default to 'EN' if not set
+                translateWithDeepL(request.text, result.deeplApiKey, targetLang)
                     .then(sendResponse)
                     .catch(error => sendResponse({ error: error.message }));
             } else {
-                sendResponse({error: 'DeepL API Key not found. Please set it in the extension popup.'});
+                sendResponse({ error: 'DeepL API Key not found. Please set it in the extension popup.' });
             }
         });
         return true; // Indicates that the response is asynchronous
     }
 });
 
-async function translateWithDeepL(texts, apiKey) {
+async function translateWithDeepL(texts, apiKey, targetLang) {
     const url = 'https://api-free.deepl.com/v2/translate';
-    const targetLang = 'EN'; // Change this to the desired target language
     try {
         // Ensure texts is an array
         const textArray = Array.isArray(texts) ? texts : [texts];
