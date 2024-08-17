@@ -91,6 +91,7 @@
 		959F7C882C6FD2F100588F61 /* Exceptions for "Shared (App)" folder in "transfari (macOS)" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				"/Localized: Main.html",
 				Assets.xcassets,
 				Resources/Icon.png,
 				Resources/Script.js,
