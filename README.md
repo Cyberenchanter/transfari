@@ -1,3 +1,6 @@
+<div align="center">
+  <img src="Shared (App)/Resources/Icon.png" alt="Icon">
+</div>
 
 # Transfari
 
@@ -15,7 +18,10 @@ DeepL Free Translation API (bring your own key)
 
 
 ## How to use:
+### iOS
 Install via AltStore (for now, I'm still considering whether to pay $100 to Apple or not).
+### macOS
+Download via GitHub Release, then allow it in your Security & Privacy settings.
 
 Enable the extension in Safari.
 
