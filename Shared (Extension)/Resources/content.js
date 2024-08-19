@@ -1,3 +1,4 @@
+//content.js
 function PageTranslator() {
     
     this.textNodes = [];
@@ -5,18 +6,18 @@ function PageTranslator() {
     this.wailLoadContentTimeoutId = null;
     
     this.init = () => {
-        if (document.readyState == 'complete') {
+        if (document.readyState === 'complete') {
             setTimeout(() => {
                 browser.storage.local.get('isAutoTranslatePage').then(result => {
-                    if(result.isAutoTranslatePage) {
+                    if (result.isAutoTranslatePage) {
                         this.autoTranslatePage();
                     }
                 });
             }, 500);
         }
-        
+
         const observer = new MutationObserver(list => {
-            if (document.readyState == 'complete') {
+            if (document.readyState === 'complete') {
                 if (this.isPageTranslated()) {
                     clearTimeout(this.wailLoadContentTimeoutId);
                     this.wailLoadContentTimeoutId = setTimeout(() => {
@@ -25,13 +26,13 @@ function PageTranslator() {
                 }
             }
         });
-        
+
         observer.observe(document.body, { childList: true, subtree: true });
-        
+
         document.addEventListener("readystatechange", () => {
-            if (document.readyState == 'complete') {
+            if (document.readyState === 'complete') {
                 browser.storage.local.get('isAutoTranslatePage').then(result => {
-                    if(result.isAutoTranslatePage) {
+                    if (result.isAutoTranslatePage) {
                         this.autoTranslatePage();
                     }
                 });
@@ -45,11 +46,11 @@ function PageTranslator() {
     
     this.autoTranslatePage = () => {
         console.log("PageTranslator.autoTranslatePage");
-        
-        if (localStorage.getItem('htex_auto_translate') != 'true') {
-            return
+
+        if (localStorage.getItem('htex_auto_translate') !== 'true') {
+            return;
         }
-        
+
         if (!this.isPageTranslated()) {
             this.requestTranslate();
         }

@@ -54,6 +54,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9542E1982C73624C00975F2B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		959F7C2F2C6FD2F100588F61 /* transfari.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = transfari.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		959F7C412C6FD2F100588F61 /* transfari.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = transfari.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		959F7C4D2C6FD2F100588F61 /* transfari Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "transfari Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +65,7 @@
 		959F7C7C2C6FD2F100588F61 /* Exceptions for "Shared (App)" folder in "transfari (iOS)" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				"/Localized: Main.html",
 				Assets.xcassets,
 				Resources/Icon.png,
 				Resources/Script.js,
@@ -258,6 +260,7 @@
 		959F7C122C6FD2EF00588F61 = {
 			isa = PBXGroup;
 			children = (
+				9542E1982C73624C00975F2B /* README.md */,
 				959F7C172C6FD2F000588F61 /* Shared (App) */,
 				959F7C202C6FD2F100588F61 /* Shared (Extension) */,
 				959F7C312C6FD2F100588F61 /* iOS (App) */,
@@ -575,7 +578,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -612,7 +615,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
