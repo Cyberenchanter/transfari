@@ -52,6 +52,25 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     translatePageButton.addEventListener('click', function() {
+        const translationService = translationServiceSelect.value;
+        const apiKey = apiKeyInput.value.trim();
+        const targetLang = targetLangSelect.value;
+        const isAutoTranslatePage = autoTranslateToggle.checked;
+        
+        if (translationService !== 'googleFree' && !apiKey) {
+            alert('Please enter a valid API Key.');
+            return;
+        }
+
+        browser.storage.local.set({
+            translationService: translationService,
+            apiKey: apiKey,
+            targetLang: targetLang,
+            isAutoTranslatePage: isAutoTranslatePage
+        }).then(() => {
+            alert('Settings saved successfully!');
+        });
+        
         browser.tabs.query({active: true, currentWindow: true}).then(tabs => {
             browser.tabs.sendMessage(tabs[0].id, {action: 'translate'});
         });

@@ -6,18 +6,36 @@
         <title>Safari Translator</title>
         <style>
             body {
-                width: 350px;
-                padding: 10px;
+                margin: 0;
+                padding: 0;
+                
+                /* Set full viewport height and use Flexbox to center contents */
+                display: flex;
+                justify-content: center; /* Centers horizontally */
+                align-items: center;    /* Centers vertically */
+                height: 100vh;          /* Ensures the body takes up the full viewport height */
+                
+                /* Optional: Set background and font styles */
                 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
                 background-color: #f9f9f9;
                 color: #333;
-                margin: 0;
             }
 
             .container {
+                /* Assign the fixed width to the container */
+                width: 350px;
+                padding: 10px;
+                
+                /* Use Flexbox to arrange child elements vertically with gaps */
                 display: flex;
                 flex-direction: column;
                 gap: 8px;
+                
+                /* Optional: Add a background and border for better visibility */
+                background-color: #fff;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             }
 
             h2 {
@@ -93,12 +111,12 @@
             </select>
             <input type="text" id="apiKey" placeholder="Enter API Key" style="display: none;">
             <select id="targetLang">
+                <option value="EN">English (Default)</option>
                 <option value="BG">Bulgarian</option>
                 <option value="CS">Czech</option>
                 <option value="DA">Danish</option>
                 <option value="DE">German</option>
                 <option value="EL">Greek</option>
-                <option value="EN">English (Default)</option>
                 <option value="EN-GB">English (British)</option>
                 <option value="EN-US">English (American)</option>
                 <option value="ES">Spanish</option>
