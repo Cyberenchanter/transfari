@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Safari Translator</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+
+                /* Set min-height instead of height to avoid issues with viewport calculations */
+                min-height: 100vh;
+
+                /* Use Flexbox to center contents */
+                display: flex;
+                justify-content: center; /* Centers horizontally */
+                align-items: center;    /* Centers vertically */
+
+                /* Optional: Set background and font styles */
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+                background-color: #f9f9f9;
+                color: #333;
+            }
+
+            .container {
+                /* Assign a max-width to avoid overflow and ensure consistency */
+                width: 350px;
+                padding: 10px;
+
+                /* Flexbox properties to arrange child elements vertically */
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+
+                /* Optional: Add a background and border for better visibility */
+                background-color: #fff;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+                /* Ensures that the container adjusts to its contents */
+                box-sizing: border-box;
+            }
+
+            h2 {
+                font-size: 20px;
+                font-weight: 600;
+                margin: 0;
+                padding-bottom: 10px;
+                text-align: center;
+                color: #1c1c1e;
+                letter-spacing: -0.5px;
+                border-bottom: 1px solid #ddd;
+            }
+
+            input, button, select {
+                width: 100%;
+                padding: 8px;
+                border-radius: 4px;
+                border: 1px solid #ccc;
+                font-size: 14px;
+                background-color: #fff;
+                box-sizing: border-box;
+            }
+
+            input:focus, select:focus, button:focus {
+                outline: none;
+                border-color: #4285F4;
+            }
+
+            button {
+                background-color: #4285F4;
+                color: #fff;
+                font-weight: 500;
+                cursor: pointer;
+                border: none;
+                margin-top: 4px;
+            }
+
+            button:hover {
+                background-color: #3367D6;
+            }
+
+            label {
+                font-size: 12px;
+                display: flex;
+                align-items: center;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            input[type="checkbox"] {
+                margin-right: 5px;
+                flex-shrink: 0;
+                width: auto;
+            }
+
+            select {
+                appearance: none;
+                background-repeat: no-repeat;
+                background-position: right 8px center;
+                padding-right: 30px;
+
+                /* Prevent issues with background images */
+                background-size: 12px 12px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Safari Translator</h2>
+            <select id="translationService">
+                <option value="googleFree">Google Translate (Free)</option>
+                <option value="googleCloud">Google Cloud Translation</option>
+                <option value="deepl">DeepL</option>
+            </select>
+            <input type="text" id="apiKey" placeholder="Enter API Key" style="display: none;">
+            <select id="targetLang">
+                <option value="EN">English (Default)</option>
+                <option value="BG">Bulgarian</option>
+                <option value="CS">Czech</option>
+                <option value="DA">Danish</option>
+                <option value="DE">German</option>
+                <option value="EL">Greek</option>
+                <option value="EN-GB">English (British)</option>
+                <option value="EN-US">English (American)</option>
+                <option value="ES">Spanish</option>
+                <option value="ET">Estonian</option>
+                <option value="FI">Finnish</option>
+                <option value="FR">French</option>
+                <option value="HU">Hungarian</option>
+                <option value="ID">Indonesian</option>
+                <option value="IT">Italian</option>
+                <option value="JA">Japanese</option>
+                <option value="KO">Korean</option>
+                <option value="LT">Lithuanian</option>
+                <option value="LV">Latvian</option>
+                <option value="NB">Norwegian (Bokmål)</option>
+                <option value="NL">Dutch</option>
+                <option value="PL">Polish</option>
+                <option value="PT">Portuguese</option>
+                <option value="PT-BR">Portuguese (Brazilian)</option>
+                <option value="PT-PT">Portuguese (European)</option>
+                <option value="RO">Romanian</option>
+                <option value="RU">Russian</option>
+                <option value="SK">Slovak</option>
+                <option value="SL">Slovenian</option>
+                <option value="SV">Swedish</option>
+                <option value="TR">Turkish</option>
+                <option value="UK">Ukrainian</option>
+                <option value="ZH">Chinese (Simplified)</option>
+            </select>
+            <label>
+                <input type="checkbox" id="autoTranslateToggle"> Enable Auto-Translate
+            </label>
+            <button id="saveSettings">Save Settings</button>
+            <button id="translatePage">Translate Page</button>
+            <button id="cancelTranslation">Cancel Translation</button>
+        </div>
+        <script src="popup.js"></script>
+    </body>
+</html>

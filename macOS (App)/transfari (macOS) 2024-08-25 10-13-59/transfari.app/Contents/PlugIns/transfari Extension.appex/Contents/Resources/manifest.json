@@ -1,0 +1,38 @@
+{
+    "manifest_version": 2,
+    "default_locale": "en",
+
+    "name": "Transfari",
+    "description": "Translator extension for Safari",
+    "version": "1.0",
+
+    "icons": {
+        "16": "images/16.png",
+        "32": "images/32.png",
+        "48": "images/48.png",
+        "64": "images/64.png",
+        "128": "images/128.png",
+        "256": "images/256.png",
+        "512": "images/512.png"
+    },
+    "permissions": [
+        "contextMenus",
+        "activeTab",
+        "storage",
+        "<all_urls>"
+    ],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "browser_action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://*/*"],
+            "js": ["content.js"],
+            "run_at": "document_end"
+        }
+    ]
+}
