@@ -18,13 +18,28 @@ DeepL Free Translation API (bring your own key)
 
 
 ## How to use:
+Download the app.
+[![Download on the App Store](appstore-logo.svg)](https://apps.apple.com/se/app/transfari/id6642705961)
+
 ### iOS
-I'm trying to submit it to the App Store(with a developer subscription paid out of my own pocket, could take some time).
+[![Open Settings](tutorial-ios-1.png)]
+[![Go to Safari extension settings](tutorial-ios-2.png)]
+[![Enable Transfari](tutorial-ios-3.png)]
 ### macOS
-Download via GitHub Release, then allow it in your Security & Privacy settings.
+Open the app.
 
-Enable 'Show features for web developers' in the Advanced tab of Safari settings, then enable 'Allow unsigned extensions' in the Developer tab.
+Follow in-app instructions.
 
-Enable the extension in Safari.
+It is recommended to give Transfari access to all websites.
 
-Select your translation engine and your target language then click 'translate page'.
+## Privacy Concerns:
+This app does not collect any information on its own. However, the webpage you choose to translate will be sent to Google/DeepL depending on your choice. You can verify the privacy promise by inspecting the source code and reverse engineering the App Store build however you want.
+
+## To-Dos:
+An in-app tutorial.
+
+Better UI.
+
+Better error prompt.
+
+Fix broken auto-translate.

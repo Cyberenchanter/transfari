@@ -14,7 +14,7 @@
 		956C89E42C7B1974002A511F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956C89E32C7B1974002A511F /* AppDelegate.swift */; };
 		956C89E72C7B1974002A511F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 956C89E62C7B1974002A511F /* Base */; };
 		956C89EE2C7B1974002A511F /* transfari Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 956C89ED2C7B1974002A511F /* transfari Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		956C89F82C7B1974002A511F /* transfari Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 956C89F72C7B1974002A511F /* transfari Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		956C89F82C7B1974002A511F /* transfariExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 956C89F72C7B1974002A511F /* transfariExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		956C89FE2C7B1974002A511F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 956C89BA2C7B1973002A511F /* Base */; };
 		956C89FF2C7B1974002A511F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 956C89BA2C7B1973002A511F /* Base */; };
 		956C8A002C7B1974002A511F /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 956C89BB2C7B1973002A511F /* Icon.png */; };
@@ -45,7 +45,6 @@
 		956C8A192C7B1974002A511F /* popup.css in Resources */ = {isa = PBXBuildFile; fileRef = 956C89C92C7B1974002A511F /* popup.css */; };
 		956C8A1A2C7B1974002A511F /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = 956C89CA2C7B1974002A511F /* popup.js */; };
 		956C8A1B2C7B1974002A511F /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = 956C89CA2C7B1974002A511F /* popup.js */; };
-		95A130F82C7B1F3500D4681D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 95A130F72C7B1F3500D4681D /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,7 +82,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				956C89F82C7B1974002A511F /* transfari Extension.appex in Embed Foundation Extensions */,
+				956C89F82C7B1974002A511F /* transfariExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -118,10 +117,9 @@
 		956C89E82C7B1974002A511F /* transfari.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = transfari.entitlements; sourceTree = "<group>"; };
 		956C89ED2C7B1974002A511F /* transfari Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "transfari Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		956C89F22C7B1974002A511F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		956C89F72C7B1974002A511F /* transfari Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "transfari Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		956C89F72C7B1974002A511F /* transfariExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = transfariExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		956C89FC2C7B1974002A511F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		956C89FD2C7B1974002A511F /* transfari.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = transfari.entitlements; sourceTree = "<group>"; };
-		95A130F72C7B1F3500D4681D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,7 +218,7 @@
 				956C89CF2C7B1974002A511F /* transfari.app */,
 				956C89E12C7B1974002A511F /* transfari.app */,
 				956C89ED2C7B1974002A511F /* transfari Extension.appex */,
-				956C89F72C7B1974002A511F /* transfari Extension.appex */,
+				956C89F72C7B1974002A511F /* transfariExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -243,7 +241,6 @@
 				956C89E32C7B1974002A511F /* AppDelegate.swift */,
 				956C89E52C7B1974002A511F /* Main.storyboard */,
 				956C89E82C7B1974002A511F /* transfari.entitlements */,
-				95A130F72C7B1F3500D4681D /* Info.plist */,
 			);
 			path = "macOS (App)";
 			sourceTree = "<group>";
@@ -337,7 +334,7 @@
 			);
 			name = "transfari Extension (macOS)";
 			productName = "transfari Extension (macOS)";
-			productReference = 956C89F72C7B1974002A511F /* transfari Extension.appex */;
+			productReference = 956C89F72C7B1974002A511F /* transfariExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -410,7 +407,6 @@
 				956C8A052C7B1974002A511F /* Script.js in Resources */,
 				956C8A092C7B1974002A511F /* Assets.xcassets in Resources */,
 				956C89FF2C7B1974002A511F /* Base in Resources */,
-				95A130F82C7B1F3500D4681D /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -672,6 +668,10 @@
 				PRODUCT_NAME = "transfari Extension";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -703,6 +703,10 @@
 				PRODUCT_NAME = "transfari Extension";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -722,6 +726,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (App)/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = transfari;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -764,6 +769,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (App)/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = transfari;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -805,7 +811,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "transfari Extension";
+				INFOPLIST_KEY_CFBundleDisplayName = transfariExtension;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -819,7 +825,7 @@
 					SafariServices,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cyberenchanter.transfari.Extension;
-				PRODUCT_NAME = "transfari Extension";
+				PRODUCT_NAME = transfariExtension;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -837,7 +843,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "transfari Extension";
+				INFOPLIST_KEY_CFBundleDisplayName = transfariExtension;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -851,7 +857,7 @@
 					SafariServices,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cyberenchanter.transfari.Extension;
-				PRODUCT_NAME = "transfari Extension";
+				PRODUCT_NAME = transfariExtension;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -872,6 +878,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = transfari;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -907,6 +914,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = transfari;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
