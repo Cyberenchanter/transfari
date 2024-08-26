@@ -19,12 +19,13 @@ DeepL Free Translation API (bring your own key)
 
 ## How to use:
 Download the app.
+
 [![Download on the App Store](appstore-logo.svg)](https://apps.apple.com/se/app/transfari/id6642705961)
 
 ### iOS
-[![Open Settings](tutorial-ios-1.png)]
-[![Go to Safari extension settings](tutorial-ios-2.png)]
-[![Enable Transfari](tutorial-ios-3.png)]
+![Open Settings](tutorial-ios-1.png)
+![Go to Safari extension settings](tutorial-ios-2.png)
+![Enable Transfari](tutorial-ios-3.png)
 ### macOS
 Open the app.
 
