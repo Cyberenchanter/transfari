@@ -37,10 +37,9 @@ document.addEventListener('DOMContentLoaded', function() {
         feedbackMessage.style.color = isSuccess ? 'green' : 'red';
         feedbackMessage.style.display = 'block';
         
-        // Hide message after 3 seconds
         setTimeout(() => {
             feedbackMessage.style.display = 'none';
-        }, 5000);
+        }, 8000);
     }
     saveSettingsButton.addEventListener('click', function() {
         const translationService = translationServiceSelect.value;
