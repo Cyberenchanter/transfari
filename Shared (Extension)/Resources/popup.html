@@ -112,9 +112,9 @@
         <div class="container">
             <h2>Safari Translator</h2>
             <select id="translationService">
-                <option value="googleFree">Google Translate (Free)</option>
-                <option value="googleCloud">Google Cloud Translation</option>
-                <option value="deepl">DeepL</option>
+                <option value="googleFree">Google Translate</option>
+                <option value="googleCloud">Google Cloud Translation API</option>
+                <option value="deepl">DeepL Free API</option>
             </select>
             <input type="text" id="apiKey" placeholder="Enter API Key" style="display: none;">
             <select id="targetLang">
@@ -153,8 +153,9 @@
                 <option value="ZH">Chinese (Simplified)</option>
             </select>
             <label>
-                <input type="checkbox" id="autoTranslateToggle"> Enable Auto-Translate
+                <input type="checkbox" id="autoTranslateToggle"> Auto Translate Current Website
             </label>
+            <p id="transfarifeedbackMessage" style="display: none; font-size: 12px; margin: 0; padding: 0;"></p>
             <button id="saveSettings">Save Settings</button>
             <button id="translatePage">Translate Page</button>
             <button id="cancelTranslation">Cancel Translation</button>

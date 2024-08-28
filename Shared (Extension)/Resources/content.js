@@ -8,8 +8,9 @@ function PageTranslator() {
     this.init = () => {
         if (document.readyState === 'complete') {
             setTimeout(() => {
-                browser.storage.local.get('isAutoTranslatePage').then(result => {
-                    if (result.isAutoTranslatePage) {
+                const domain = window.location.hostname;
+                browser.storage.local.get(`isAutoTranslatePage_${domain}`).then(result => {
+                    if (result[`isAutoTranslatePage_${domain}`]) {
                         this.autoTranslatePage();
                     }
                 });
@@ -31,25 +32,21 @@ function PageTranslator() {
 
         document.addEventListener("readystatechange", () => {
             if (document.readyState === 'complete') {
-                browser.storage.local.get('isAutoTranslatePage').then(result => {
-                    if (result.isAutoTranslatePage) {
+                const domain = window.location.hostname;
+                browser.storage.local.get(`isAutoTranslatePage_${domain}`).then(result => {
+                    if (result[`isAutoTranslatePage_${domain}`]) {
                         this.autoTranslatePage();
                     }
                 });
             }
         });
     };
-    
     this.isPageTranslated = () => {
         return document.body.parentNode.getAttribute("translated") ? true : false;
     };
     
     this.autoTranslatePage = () => {
         console.log("PageTranslator.autoTranslatePage");
-
-        if (localStorage.getItem('htex_auto_translate') !== 'true') {
-            return;
-        }
 
         if (!this.isPageTranslated()) {
             this.requestTranslate();
@@ -91,7 +88,6 @@ function PageTranslator() {
             console.log("PageTranslator.translate - error:", message.error);
         } else if (message.translatedText.length > 0) {
             this.replaceText(message.translatedText);
-            localStorage.setItem('htex_auto_translate', 'true');
         }
     };
     
@@ -195,7 +191,6 @@ function PageTranslator() {
         });
         
         document.body.parentNode.removeAttribute("translated");
-        localStorage.setItem('htex_auto_translate', 'false');
     };
     
     this.updateContextMenu = (e) => {
